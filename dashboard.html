@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="/css/dashboardStyles.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section class="MainContent">
+
+        <div class="TopRow">
+            <h1 class="locationSelector" id="locationH1">Pasig</h1>
+            <select class="minimal">
+                <option>Pasig</option>
+                <option>Manila</option>
+                <option>Rizal</option>
+            </select>
+
+            <form action="/action_page.php">
+                <input type="date" id="birthday" name="birthday">
+            </form>
+
+            <button id="notificationButton">
+                <i class='bx bx-bell'></i>
+            </button>
+        </div>
+
+        <h2>Overview</h2>
+
+        <section class="firstRowDashboards">
+
+            <div class="dashboardSmall">
+                <h2 class="dashboardNames">Number of Active Anomalies</h2>
+                <h3 class="valueofDashboard">20</h3>
+                <p class="dashboardAnnotion">Today</p>
+            </div>
+
+            <div class="dashboardSmall">
+                <h2 class="dashboardNames">Number of Active Anomalies</h2>
+                <h3 class="valueofDashboard">20</h3>
+                <p class="dashboardAnnotion">Today</p>
+            </div>
+
+            <div class="dashboardSmall">
+                <h2 class="dashboardNames">Number of Active Anomalies</h2>
+                <h3 class="valueofDashboard">20</h3>
+                <p class="dashboardAnnotion">Today</p>
+            </div>
+
+            <div class="dashboardSmall">
+                <h2 class="dashboardNames">Number of Active Anomalies</h2>
+                <h3 class="valueofDashboard">20</h3>
+                <p class="dashboardAnnotion">Today</p>
+            </div>
+
+            </div>
+        </section>
+
+        <section class="secondRowDashboards">
+
+
+            <div class="dashboardBig">
+                <h2>leading hardware bargraph</h2>
+                <p>Last 3 Months</p>
+                <div id="bargraphs">
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+                        var yValues = [55, 49, 44, 24, 15];
+                        var barColors = ["red", "green", "blue", "orange", "brown"];
+
+                        new Chart("myChart", {
+                            type: "bar",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    backgroundColor: barColors,
+                                    data: yValues
+                                }]
+                            },
+                            options: {
+                                legend: { display: false },
+                                title: {
+                                    display: true,
+                                    text: "World Wine Production 2018"
+                                }
+                            }
+                        });
+                    </script>
+
+                </div>
+            </div>
+
+            <div class="dashboardBig">
+                <h2>failureHeatmap</h2>
+                <p>Last 3 Months</p>
+                <div id="heatmap">
+                </div>
+            </div>
+
+        </section>
+
+        <section class="thirdRowDashboards">
+
+            <div class="workOrder">
+                <h2>Workorders</h2>
+                <h3>as of date</h3>
+
+            </div>
+
+            <div class="smallWorkOrder">
+                <h2>Current Workorders</h2>
+                <h3>as of date</h3>
+            </div>
+        </section>
+
+    </section>
+</body>
+
+</html>
