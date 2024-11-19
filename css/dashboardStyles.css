@@ -30,18 +30,39 @@ body {
   background-color: #f3f5f8;
 }
 
+body section {
+  margin-bottom: 10px;
+}
+
 .MainContent {
   flex-direction: column;
   display: inline;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .TopRow {
-  width: 100vw;
   height: 48px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TopRow.ActionButtons {
+  text-align: right;
+}
+
+.TopRow.LocationText {
+  margin-left: 10px;
+  text-align: left;
+}
+
+.TopRow #ActionButtons select,
+.TopRow #ActionButtons form,
+.TopRow #ActionButtons button {
+  margin-left: 10px; /* Adjust the margin as needed */
 }
 
 .locationH1 {
@@ -131,6 +152,10 @@ select:-moz-focusring {
 .firstRowDashboards {
   flex-direction: row;
   display: flex;
+}
+
+.overviewText {
+  font-size: 20px;
 }
 
 .firstRowDashboards div {
